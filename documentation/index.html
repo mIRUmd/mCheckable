@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mCheckable</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/github.css"/>
+    <link rel="stylesheet" href="../dev/mCheckable.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body data-spy="scroll" data-target="#sidenav">
+<div class="center-content">
+    <div role="main" class="col-md-9">
+        <h2 class="page-header" id="top">Why should I use this plugin ?</h2>
+        <ul>
+            <li>Identical inputs across different browsers and devices</li>
+            <li>Highly customizable checkboxes and radio buttons for jQuery</li>
+            <li>Small file size, simple to implement</li>
+            <li>Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+</li>
+            <li>Many configuration <a href="#options">options</a></li>
+        </ul>
+        <div class="section">
+            <h2 class="page-header" id="how-to-install">How to install</h2>
+            <div class="step">
+                <h3>Step 1: Link required files</h3>
+                <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-checkable</code> , install via NPM: <code>npm install m-checkable</code>,  and link the mCheckable CSS file (for the theme) and the mCheckable Javascript file.</p>
+            <pre><code data-language="html">    &lt;!-- jQuery library (served from Google) --&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- mCheckable Javascript file --&gt;
+    &lt;script src=&quot;/js/mCheckable.jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- mCheckable CSS file --&gt;
+    &lt;link  href=&quot;/lib/mCheckable.css&quot; rel=&quot;stylesheet&quot; /&gt;
+            </code></pre>
+            </div>
+            <div class="step">
+                <h3>Step 2: Create HTML markup</h3>
+                <p>Create checkboxes or radio buttons that you want to customise</p>
+        <pre><code data-language="html"> &lt;label&gt;Checkbox &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+ &lt;label&gt;Radio &lt;input type=&quot;radio&quot; name=&quot;radio&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;</code></pre>
+            </div>
+            <div class="step">
+                <h3>Step 3: Call the mCheckable</h3>
+                <p>Call .mCheckable() on class mCheck  . Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
+        <pre><code data-language="javascript">
+    $(document).ready(function(){
+        // generate elements
+        $(&#39;.mCheck&#39;).mCheckable();
+    });
+        </code></pre>
+            </div>
+        </div>
+        <div class="section">
+            <h2 id="examples" class="page-header">Examples</h2>
+            <h3>1. Basic example</h3>
+            HTML :
+    <pre><code data-language="html">    &lt;div&gt;
+        &lt;label&gt;Checkbox 1 &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+        &lt;label&gt;Checkbox 2 &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+        &lt;label&gt;Checkbox 3 &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label&gt;Radio 1 &lt;input type=&quot;radio&quot; name=&quot;radio&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+        &lt;label&gt;Radio 2 &lt;input type=&quot;radio&quot; name=&quot;radio&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+        &lt;label&gt;Radio 3 &lt;input type=&quot;radio&quot; name=&quot;radio&quot; class=&quot;mCheck&quot;/&gt;&lt;/label&gt;
+    &lt;/div&gt; </code></pre>
+            JS :
+    <pre><code data-language="javascript">  $(function () {
+        $(&#39;.mCheck&#39;).mCheckable();
+    }); </code></pre>
+            <br />
+            <h4>Result :</h4>
+            <div class="result sample-1">
+                <div>
+                    <label>Checkbox 1 <input type="checkbox" name="checkbox" class="mCheck"/></label>
+                    <label>Checkbox 2 <input type="checkbox" name="checkbox" class="mCheck"/></label>
+                    <label>Checkbox 3 <input type="checkbox" name="checkbox" class="mCheck"/></label>
+                </div>
+                <div>
+                    <label>Radio 1 <input type="radio" name="radio" class="mCheck"/></label>
+                    <label>Radio 2 <input type="radio" name="radio" class="mCheck"/></label>
+                    <label>Radio 3 <input type="radio" name="radio" class="mCheck"/></label>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 id="options" class="page-header">Options</h2>
+            <table class="table options">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Options</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>className</td>
+                    <td>
+                        <div>default : mCheckable</div>
+                        <div>options : string (class name)</div>
+                    </td>
+                    <td>Change base class name.</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>classNameRadioButton</td>
+                    <td>
+                        <div>default : radiobutton</div>
+                        <div>options : string (class name)</div>
+                    </td>
+                    <td>Class name for radio buttons.</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>classNameCheckbox</td>
+                    <td>
+                        <div>default : checkbox</div>
+                        <div>options : string (class name)</div>
+                    </td>
+                    <td>Class name for checkbox.</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>addClassName</td>
+                    <td>
+                        <div>default : false</div>
+                        <div>options : string (class name)</div>
+                    </td>
+                    <td>Add extra class name.</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>baseTags</td>
+                    <td>
+                        <div>default : <pre class="inline"><code data-language="html">&lt;span&gt;&lt;/span&gt;</code></pre></div>
+                        <div>options : any html tags</div>
+                    </td>
+                    <td>Base html tags for mCheckable</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>innerTags</td>
+                    <td>
+                        <div>default : <pre class="inline"><code data-language="html">&lt;em&gt;&lt;/em&gt;</code></pre></div>
+                        <div>options : any html tags</div>
+                    </td>
+                    <td>Inner html tags for mCheckable </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2 id="methods" class="page-header">Methods</h2>
+            <table class="table options">
+                <tr>
+                    <th>#</th>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><pre><code data-language="javascript">$('#elem').mCheckable('check')</code></pre></td>
+                    <td>Manually check an item.</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><pre><code data-language="javascript">$('#elem').mCheckable('unCheck')</code></pre></td>
+                    <td>Manually un-check an item.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2 id="events" class="page-header">Events</h2>
+            <table class="table options">
+                <tr>
+                    <th>#</th>
+                    <th>Event</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><pre><code data-language="javascript">$('#elem').mCheckable('onClick' = function (e) {
+                        // do something...
+                        });</code></pre></td>
+                    <td>Trigger on click mCheckable.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div role="complementary" class="col-md-3">
+        <nav class="sidebar-menu nav-pills nav-stacked" id="sidenav" data-spy="affix">
+            <a href="#top">mCheckable</a>
+            <ul class="nav">
+                <li><a href="#how-to-install">How to install</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#options">Options</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+            <a href="#top" class="back-to-top">
+                Back to top
+            </a>
+        </nav>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="js/vendor/highlight.pack.js"></script>
+<script src="../dist/mCheckable.jquery.min.js"></script>
+<script src="js/main.func.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "m-checkable",
+  "version": "1.0.0",
+  "title": "mCheckable",
+  "description": "Highly customizable checkboxes and radio buttons",
+  "keywords": [
+    "jquery-plugin",
+    "checkboxes",
+    "radio buttons",
+    "cross-browser",
+    "customizable"
+  ],
+  "author": {
+    "name": "Balan Miroslav",
+    "email": "mIRU.md@gmail.com",
+    "web": "http://mirudev.com/mcheckable/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mIRUmd/mCheckable/issues"
+  },
+  "main": "dist/mCheckable.jquery.js",
+  "homepage": "https://github.com/mIRUmd/mCheckable/",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt jshint"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.1.0",
+    "grunt-banner": "^0.3.0",
+    "grunt-contrib-csslint": "^0.3.1",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-css": "^0.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mIRUmd/mCheckable.git"
+  }
+}
