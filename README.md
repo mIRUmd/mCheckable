@@ -14,7 +14,7 @@ Released under the MIT license - http://opensource.org/licenses/MIT
 
 Created by Balan Miroslav
 
-## Why should I use this popup?
+## Why should I use mCheckable?
 * Identical inputs across different browsers and devices
 * Highly customizable checkboxes and radio buttons for jQuery
 * Small file size, simple to implement

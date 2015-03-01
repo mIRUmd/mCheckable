@@ -1,4 +1,4 @@
-/*! mCheckable - v1.0.0 - 2015-03-01
+/*! mCheckable - v1.0.1 - 2015-03-01
 * https://github.com/mIRUmd/mCheckable/
 * Copyright (c) 2015 Balan Miroslav; */
 
