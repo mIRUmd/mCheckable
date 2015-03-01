@@ -22,20 +22,20 @@ Created by Balan Miroslav
 * Many configuration options
 
 For complete documentation and examples, visit:
-[http://mirudev.com/mpopup/](http://mirudev.com/mcheckable/)
+[http://mirudev.com/mcheckable/](http://mirudev.com/mcheckable/)
 
 
 ## How to install
 
 ### Step 1: Link required files
-First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: `bower install m-checkable` , install via NPM: `npm install m-checkable`, and link the mPopup CSS file (for the theme) and the mPopup Javascript file.
+First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: `bower install m-checkable` , install via NPM: `npm install m-checkable`, and link the mCheckable CSS file (for the theme) and the mCheckable Javascript file.
 
 ```html
 <!-- jQuery library (served from Google) -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<!-- mPopup Javascript file -->
+<!-- mCheckable Javascript file -->
 <script src="/js/mCheckable.jquery.min.js"></script>
-<!-- mPopup CSS file -->
+<!-- mCheckable CSS file -->
 <link href="/lib/mCheckable.css" rel="stylesheet">
 ```
 
@@ -109,13 +109,13 @@ options : any html tags
 **check**
 Manually check an item.
 ```
-$('#elem').mPopup('check')
+$('#elem').mCheckable('check')
 ```
 
 **unCheck**
 Manually un-check an item.
 ```
-$('#elem').mPopup('unCheck')
+$('#elem').mCheckable('unCheck')
 ```
 
 ### Events
